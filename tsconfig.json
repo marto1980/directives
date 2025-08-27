@@ -22,6 +22,7 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
+  "include": ["src", "stylelint.config.ts", "eslint.config.ts", "types/*.d.ts"],
   "files": [],
   "references": [
     {
