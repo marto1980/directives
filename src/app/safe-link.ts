@@ -16,7 +16,12 @@ export class SafeLink {
       'Do you really want to leave the app?',
     )
 
-    if (wantsToLeave) return
+    if (wantsToLeave) {
+      const href = (event.target as HTMLAnchorElement).href
+      ;(event.target as HTMLAnchorElement).href = href + '?from=myapp'
+
+      return
+    }
 
     event.preventDefault()
   }
