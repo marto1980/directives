@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core'
+import { Directive, input } from '@angular/core'
 
 @Directive({
   selector: 'a[appSafeLink]',
@@ -7,6 +7,7 @@ import { Directive } from '@angular/core'
   },
 })
 export class SafeLink {
+  queryParam = input('myapp')
   constructor() {
     console.log('Calling AppSafeLink')
   }
@@ -18,7 +19,8 @@ export class SafeLink {
 
     if (wantsToLeave) {
       const href = (event.target as HTMLAnchorElement).href
-      ;(event.target as HTMLAnchorElement).href = href + '?from=myapp'
+      ;(event.target as HTMLAnchorElement).href =
+        href + `?from=${this.queryParam()}`
 
       return
     }
