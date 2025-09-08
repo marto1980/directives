@@ -4,12 +4,11 @@ import { AuthComponent } from './auth/auth'
 import { AuthDirective } from './auth/auth-directive'
 import { AuthService } from './auth/auth.service'
 import { LearningResourcesComponent } from './learning-resources/learning-resources'
-import { Log } from './log'
 
 @Component({
   selector: 'app-root',
 
-  imports: [AuthComponent, LearningResourcesComponent, AuthDirective, Log],
+  imports: [AuthComponent, LearningResourcesComponent, AuthDirective],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
