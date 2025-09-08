@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 
+import { Log } from '../log'
 import { SafeLink } from '../safe-link'
 
 @Component({
@@ -7,6 +8,6 @@ import { SafeLink } from '../safe-link'
   templateUrl: './learning-resources.html',
   styleUrl: './learning-resources.scss',
   standalone: true,
-  imports: [SafeLink],
+  imports: [SafeLink, Log],
 })
 export class LearningResourcesComponent {}
